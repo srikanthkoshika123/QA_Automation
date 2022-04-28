@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UnifocusScheduler">
+   <listeners>
+         <listener class-name="com.pack.utils.Reporting"/>
+        </listeners>
+  <test name="openShift">
+    <parameter name="browser" value="chrome" />
+       <classes>
+              <class name="com.pack.budgetingtestCases.TC_C33432"/>
+        
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+   
