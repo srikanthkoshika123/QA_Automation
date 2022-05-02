@@ -3,6 +3,7 @@ package com.pack.testCases;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import com.pack.loginPages.C32968;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.pack.loginPages.C33193;
@@ -16,17 +17,30 @@ public class TC_C33193 extends TC_BaseClass {
 
 	@Test(dataProvider = "Certifications")
 
-	public void certifications(String empId, String autoCert1, String issuedate, String startdate,
+	public void certifications(String url, String partnerCode, String loginas, String Password, String dbModel,
+							   String db, String dbName, String module,String empId, String autoCert1, String issuedate, String startdate,
 			String expirationdate, String autoCert2, String autoCert3, String dates, String doubleclick,
 			String starttime, String endtime, String jobName) throws Exception {
 		TestCase_ID="33193";
 		ScreenRecorderUtil.startRecord("C33193");
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		C33193 certification = new C33193(driver);
+		certification.setPartnerCode(partnerCode);
+		certification.clickNext();
+		logger.info("enter user name");
+		certification.setUserName(loginas);
+		logger.info("password entered");
+		certification.setPassWord(Password);
+		Thread.sleep(4000);
+		certification.clickSignIn(dbModel);
+		logger.info("signin clicked");
+		certification.selectDataBase(db, dbName, module);
 		EmployeeMaintenance employeemaintenance = new EmployeeMaintenance(driver);
 		employeemaintenance.clickUnifocus();
 		employeemaintenance.getselect_List();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		C33193 certification = new C33193(driver);
 		certification.switchFrame();
 		certification.selectEmployee(empId);
 		certification.addJob();

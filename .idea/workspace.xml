@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042864ee-d8eb-4cb4-88ce-2b163445f3b0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.03.21.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.05.26.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.08.59.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.10.17.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.45.22.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.48.50.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.51.45.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 15.54.37.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.23.10.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.26.37.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.30.19.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.32.19.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.56.09.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 16.58.14.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.00.17.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.03.07.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.05.34.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.09.10.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.12.39.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.14.44.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.17.14.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.19.42.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.23.06.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.25.15.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/EmployeeAvailability-2022-04-29 17.27.18.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/LaborStructure_Assignment-2022-04-29 17.38.44.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/financial-2022-04-29 11.39.49.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/financial-2022-04-29 11.45.11.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/reporter-2022-04-28 17.28.40.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/reporter-2022-04-28 17.31.15.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/reporter-2022-04-28 17.33.44.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-recordings/reporter-2022-04-28 17.36.59.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C32968.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C32968.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C33193.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C33193.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C32968.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C32968.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C33193.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C33193.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testData/AddCertifications.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testData/AddCertifications.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testData/Certifications.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testData/Certifications.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,31 +46,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.C:/Users/745 G6/git/QA-Automation-EmployeeMaintenance/testng.xml">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="UnifocusScheduler" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="UnifocusScheduler" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/745 G6/AppData/Local/JetBrains/IdeaIC2022.1/temp-testng-customsuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <option name="SUITE_NAME" value="$USER_HOME$/AppData/Local/JetBrains/IdeaIC2022.1/temp-testng-customsuite.xml" />
       <option name="TEST_OBJECT" value="SUITE" />

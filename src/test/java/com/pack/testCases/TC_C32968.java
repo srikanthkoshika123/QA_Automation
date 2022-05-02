@@ -3,6 +3,7 @@ package com.pack.testCases;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import com.pack.loginPages.C32967;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.pack.loginPages.C32968;
@@ -12,13 +13,27 @@ import recordingTests.ScreenRecorderUtil;
 
 public class TC_C32968 extends TC_BaseClass {
 	@Test(dataProvider = "CertificationSetUp")
-	public void Updatecertification(String certfi1, String cert2, String div1, String dep1, String autoJob1, String job,
+	public void Updatecertification(String url, String partnerCode, String loginas, String Password, String dbModel,
+									String db, String dbName, String module,String certfi1, String cert2, String div1, String dep1, String autoJob1, String job,
 			String autoJob2, String jobCode, String autojob2, String cert, String autoJob, String job1, String autoJob3,
 			String jobCode1, String autojob3, String cert1) throws Exception {
 		TestCase_ID="32968";
 		ScreenRecorderUtil.startRecord("C32968");
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		C32968 certification = new C32968(driver);
+		certification.setPartnerCode(partnerCode);
+		certification.clickNext();
+		logger.info("enter user name");
+		certification.setUserName(loginas);
+		logger.info("password entered");
+		certification.setPassWord(Password);
+		Thread.sleep(4000);
+		certification.clickSignIn(dbModel);
+		logger.info("signin clicked");
+		certification.selectDataBase(db, dbName, module);
 		certification.clickUnifocus();
 		certification.clickAddRowButton();
 		certification.clickAutocert1(certfi1);
