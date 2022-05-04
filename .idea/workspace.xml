@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="042864ee-d8eb-4cb4-88ce-2b163445f3b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C32968.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C32968.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C33193.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/loginPages/C33193.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C32968.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C32968.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C33193.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testCases/TC_C33193.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testData/AddCertifications.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testData/AddCertifications.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/testData/Certifications.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/testData/Certifications.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

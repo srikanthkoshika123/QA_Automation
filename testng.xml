@@ -7,7 +7,7 @@
   <test name="openShift">
     <parameter name="browser" value="firefox" />
        <classes>
-              <class name="com.pack.testCases.TC_C30317"/>
+              <class name="com.pack.testCases.TC_C27507"/>
         
     </classes>
   </test> <!-- Test -->
