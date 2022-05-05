@@ -5,9 +5,9 @@
          <listener class-name="com.pack.utils.Reporting"/>
         </listeners>
   <test name="openShift">
-    <parameter name="browser" value="chrome" />
+    <parameter name="browser" value="firefox" />
        <classes>
-              <class name="com.pack.testCases.TC_C27507"/>
+              <class name="com.pack.employeemaintenancetestcases.TC_C27427"/>
         
     </classes>
   </test> <!-- Test -->

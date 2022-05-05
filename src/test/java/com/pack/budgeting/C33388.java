@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.pack.testCases.TC_BaseClass;
+import com.pack.employeemaintenancetestcases.TC_BaseClass;
 
 @SuppressWarnings("deprecation")
 public class C33388 extends TC_BaseClass {
