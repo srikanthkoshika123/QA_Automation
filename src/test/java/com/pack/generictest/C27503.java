@@ -46,14 +46,14 @@ public class C27503 extends TC_BaseClass {
 	WebElement timeLineScheduling;
 
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
@@ -76,7 +76,7 @@ public class C27503 extends TC_BaseClass {
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
@@ -89,46 +89,46 @@ public class C27503 extends TC_BaseClass {
 	}
 
 	public void selectDataBase(String db, String dbName, String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='" + db + "']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[normalize-space()='" + dbName + "']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
-		WebDriverWait wait4 = new WebDriverWait(driver, 120);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement rms = wait4.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='" + module + "']")));
 		rms.click();
 	}
 
 	public void clickUnifocus() {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement unifocus = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//header/div[1]/div[1]/div[1]/button[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", unifocus);
 		String un = unifocus.getText();
 		System.out.println(un);
 		Assert.assertEquals("UniFocus", un);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement labor = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Labor']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", labor);
 	}
 
 	public void clickEnterActualEnvironments() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement actual = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Actuals']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actual);
 		driver.switchTo().frame(frame);
-		WebDriverWait wait = new WebDriverWait(driver, 80);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement mn = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//ul[@class='ant-timeline']/div[1]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -147,7 +147,7 @@ public class C27503 extends TC_BaseClass {
 			}
 		}
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actuals = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actuals);
@@ -163,12 +163,12 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickEnterActualKBIs() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement actuals = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Actuals']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actuals);
 
 		driver.switchTo().frame(frame);
-		WebDriverWait wait3 = new WebDriverWait(driver, 80);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement mn = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//ul[@class='ant-timeline']/div[4]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -187,7 +187,7 @@ public class C27503 extends TC_BaseClass {
 			}
 		}
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
@@ -204,12 +204,12 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickEnterEmployeeProductivity() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement actuals = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Actuals']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actuals);
 
 		driver.switchTo().frame(frame);
-		WebDriverWait wait1 = new WebDriverWait(driver, 80);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement mn = wait1.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//ul[@class='ant-timeline']/div[5]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -231,7 +231,7 @@ public class C27503 extends TC_BaseClass {
 			}
 		}
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
@@ -248,12 +248,12 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickEnterActualHours() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement actuals = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Actuals']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actuals);
 
 		driver.switchTo().frame(frame);
-		WebDriverWait wait1 = new WebDriverWait(driver, 80);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement mn = wait1.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//ul[@class='ant-timeline']/div[8]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -276,7 +276,7 @@ public class C27503 extends TC_BaseClass {
 		}
 
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
 	/*	driver.switchTo().frame(frame);
@@ -291,16 +291,16 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickPlanning() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement planning = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Planning']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", planning);
 
 		driver.switchTo().frame(frame);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement quickView = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Quick View']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", quickView);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement listView = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='List View']")));
 		Thread.sleep(3000);
@@ -313,7 +313,7 @@ public class C27503 extends TC_BaseClass {
 		int attempts = 0;
 		while (attempts < 2) {
 			try {
-				WebDriverWait wait3 = new WebDriverWait(driver, 80);
+				WebDriverWait wait3 = new WebDriverWait(driver, 180);
 				WebElement EnterScheduledHours = wait3.until(ExpectedConditions
 						.visibilityOfElementLocated(By.xpath("//ul[@class='ant-timeline']/div[13]/div/div[2]/div/i")));
 				Actions a = new Actions(driver);
@@ -333,7 +333,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickForecastEnvironments() throws InterruptedException {
 		Actions a = new Actions(driver);
-		WebDriverWait wait = new WebDriverWait(driver,120);
+		WebDriverWait wait = new WebDriverWait(driver,180);
 		WebElement mn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[text()='In Progress'])[1]")));
 		Coordinates cor = ((Locatable) mn).getCoordinates();
 		cor.inViewPort();
@@ -341,7 +341,7 @@ public class C27503 extends TC_BaseClass {
 		Thread.sleep(1000);
 		driver.switchTo().activeElement();
 		Thread.sleep(3000);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement update = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[text()='Update'])[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();",update);
 		/*
@@ -364,7 +364,7 @@ public class C27503 extends TC_BaseClass {
 		//div[4]/div/div/ul[@role='menu']
 	
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
 		Thread.sleep(2000);
@@ -380,7 +380,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickEnterPreWork() throws InterruptedException {
 		clickPlanning();
-		WebDriverWait wait2 = new WebDriverWait(driver, 80);
+		WebDriverWait wait2 = new WebDriverWait(driver, 180);
 		WebElement EnterPreWork = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div/div/ul[@class='ant-timeline']/div[2]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
 		a.moveToElement(EnterPreWork).click().build().perform();
@@ -399,7 +399,7 @@ public class C27503 extends TC_BaseClass {
 			}
 		}
 		driver.switchTo().defaultContent();
-		WebDriverWait wait21 = new WebDriverWait(driver, 40);
+		WebDriverWait wait21 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait21.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
 		Thread.sleep(2000);
@@ -416,7 +416,7 @@ public class C27503 extends TC_BaseClass {
 	public void clickEnterInputKBIForecast() throws InterruptedException {
 		clickPlanning();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 80);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement EnterInputKBIForecast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div/div/ul[@class='ant-timeline']/div[4]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
 		Coordinates cor = ((Locatable) EnterInputKBIForecast).getCoordinates();
@@ -440,7 +440,7 @@ public class C27503 extends TC_BaseClass {
 		}
 
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
@@ -458,7 +458,7 @@ public class C27503 extends TC_BaseClass {
 	public void clickViewEditRoomsForecast() throws InterruptedException {
 		clickPlanning();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 80);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement EditRevenueCenterForecast = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[2]/div/div//ul[@class='ant-timeline']/div[6]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -482,7 +482,7 @@ public class C27503 extends TC_BaseClass {
 		}
 
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
@@ -499,7 +499,7 @@ public class C27503 extends TC_BaseClass {
 	public void clickManageSchedules() throws InterruptedException {
 		clickPlanning();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 80);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement ManageSchedules = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[2]/div/div//ul[@class='ant-timeline']/div[12]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -523,7 +523,7 @@ public class C27503 extends TC_BaseClass {
 		}
 
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
@@ -543,7 +543,7 @@ public class C27503 extends TC_BaseClass {
 	public void clickEnterScheduledHours() throws InterruptedException {
 		clickPlanning();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 80);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement EnterScheduledHours = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[2]/div/div//ul[@class='ant-timeline']/div[13]/div/div[2]/div/i")));
 		Actions a = new Actions(driver);
@@ -566,7 +566,7 @@ public class C27503 extends TC_BaseClass {
 			}
 		}
 		driver.switchTo().defaultContent();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement actualsclose = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='root']/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", actualsclose);
 		Thread.sleep(2000);
@@ -583,7 +583,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickReProjectLabor() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement reProjectLabor = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Re-Project Labor']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", reProjectLabor);
 		driver.switchTo().frame(frame);
@@ -600,7 +600,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickScheduling() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement scheduling = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Scheduling']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", scheduling);
 		driver.switchTo().frame(frame);
@@ -615,11 +615,11 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickEmployeeRequests() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement employeeRequests = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Employee Requests']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeRequests);
 		driver.switchTo().frame(frame);
-		WebDriverWait kbi = new WebDriverWait(driver, 80);
+		WebDriverWait kbi = new WebDriverWait(driver, 180);
 		WebElement addRequest = kbi.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button//span[text()=' Add Request']")));
 		String scheduledPeriod = addRequest.getText();
 		System.out.println(scheduledPeriod);
@@ -629,15 +629,15 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickShiftRequests() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement employeeRequests = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Employee Requests']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeRequests);
 		driver.switchTo().frame(frame);
-		WebDriverWait wait1 = new WebDriverWait(driver, 120);
+		WebDriverWait wait1 = new WebDriverWait(driver, 180);
 		WebElement addRequest = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@title='Shift Requests']")));
 		Thread.sleep(6000);
 		addRequest.click();
-		WebDriverWait kbi = new WebDriverWait(driver, 80);
+		WebDriverWait kbi = new WebDriverWait(driver, 180);
 		WebElement shifts = kbi.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Shift Start (Soonest First)']")));
 		String shift = shifts.getText();
 		System.out.println(shift);
@@ -648,7 +648,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickCallIns() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement employeeRequests = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Employee Requests']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeRequests);
 		driver.switchTo().frame(frame);
@@ -657,7 +657,7 @@ public class C27503 extends TC_BaseClass {
 		Thread.sleep(4000);
 		callIns.click();
 		driver.switchTo().activeElement();
-		WebDriverWait kbi = new WebDriverWait(driver, 80);
+		WebDriverWait kbi = new WebDriverWait(driver, 180);
 		WebElement filter = kbi.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Call In Date (Oldest First)']")));
 		String shift = filter.getText();
 		System.out.println(shift);
@@ -668,7 +668,7 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickAvailabilityRequests() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement employeeRequests = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Employee Requests']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeRequests);
 		driver.switchTo().frame(frame);
@@ -677,7 +677,7 @@ public class C27503 extends TC_BaseClass {
 		Thread.sleep(4000);
 		avalability.click();
 		driver.switchTo().activeElement();
-		WebDriverWait kbi = new WebDriverWait(driver, 80);
+		WebDriverWait kbi = new WebDriverWait(driver, 180);
 		WebElement EnteredonDate = kbi.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Entered on Date (Oldest First)']")));
 		String shift = EnteredonDate.getText();
 		System.out.println(shift);
@@ -688,12 +688,12 @@ public class C27503 extends TC_BaseClass {
 
 	public void clickTimeLineScheduling() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement timeLineScheduling = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Timeline Scheduling']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", timeLineScheduling);
 		driver.switchTo().frame(frame);
 		driver.switchTo().activeElement();
-		WebDriverWait kbi = new WebDriverWait(driver, 80);
+		WebDriverWait kbi = new WebDriverWait(driver, 180);
 		WebElement addShift = kbi.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='title-1086-textEl']")));
 		String shift = addShift.getText();
 		System.out.println(shift);

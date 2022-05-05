@@ -8,17 +8,6 @@
     <parameter name="browser" value="chrome" />
        <classes>
            <class name="com.pack.generictestcases.TC_C27503"/>
-           <class name="com.pack.generictestcases.TC_C27504"/>
-           <class name="com.pack.generictestcases.TC_C27505"/>
-           <class name="com.pack.generictestcases.TC_C27506"/>
-           <class name="com.pack.generictestcases.TC_C27507"/>
-           <class name="com.pack.generictestcases.TC_C27509"/>
-           <class name="com.pack.generictestcases.TC_C27647"/>
-           <class name="com.pack.generictestcases.TC_C27648"/>
-           <class name="com.pack.generictestcases.TC_C27649"/>
-           <class name="com.pack.generictestcases.TC_C27650"/>
-           <class name="com.pack.generictestcases.TC_C27651"/>
-           <class name="com.pack.generictestcases.TC_C27652"/>
         
     </classes>
   </test> <!-- Test -->

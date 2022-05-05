@@ -27,21 +27,21 @@ public class C27504 extends TC_BaseClass {
 	WebElement close;
 
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
 	}
 
 	public void setUserName(String uname) {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement txtName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Login ID']")));
 		txtName.sendKeys(uname);
@@ -57,7 +57,7 @@ public class C27504 extends TC_BaseClass {
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
@@ -69,35 +69,35 @@ public class C27504 extends TC_BaseClass {
 
 	}
 	public void selectDataBase(String db,String dbName,String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[text()='"+db+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[normalize-space()='"+dbName+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
-		WebDriverWait wait4 = new WebDriverWait(driver, 120);
+		WebDriverWait wait4 = new WebDriverWait(driver, 180);
 		WebElement rms = wait4
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='"+module+"']")));
 		rms.click();
 	}
 	public void clickUnifocus() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement unifocus = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='fa fa-bars header-icon']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", unifocus);
 		String un = unifocus.getText();
 		System.out.println(un);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement tANDa = wait1.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//div[@class='ant-menu-submenu-title']//span[text()='T&A']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", tANDa);
@@ -107,7 +107,7 @@ public class C27504 extends TC_BaseClass {
 	}
 
 	public WebElement clickReviewPayPeriod() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement reviewPayPeriod = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Review Pay Period']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", reviewPayPeriod);
@@ -134,7 +134,7 @@ public class C27504 extends TC_BaseClass {
 		while (attempts < 2) {
 			try {
 
-				WebDriverWait wait1 = new WebDriverWait(driver, 40);
+				WebDriverWait wait1 = new WebDriverWait(driver, 240);
 				WebElement reviewPayPeriod = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 						"//*[@id='root']/div/div[1]/div[2]/div/div/div/div/div/div[2]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[3]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]/div/div/div[1]/div[1]")));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", reviewPayPeriod);
@@ -150,7 +150,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void reviewTimeCard() {
 		driver.switchTo().defaultContent();
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement rpClose = wait3.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//*[@id=\"root\"]/div/div/section/div/div/div[1]/div[2]/div/div/div/div[1]/div[2]/div/i")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", rpClose);
@@ -168,7 +168,7 @@ public class C27504 extends TC_BaseClass {
 	public void whoIsInOut() throws InterruptedException {
 
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement whoIsInOut = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Who Is In/Out']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", whoIsInOut);
@@ -191,7 +191,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickAttendancePointsandEvents() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement attendancePointsandEvents = wait.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Attendance Points and Events']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", attendancePointsandEvents);
@@ -214,7 +214,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickBenefits() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement benefits = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Benefits']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", benefits);
 		driver.switchTo().frame(frame);
@@ -228,7 +228,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickEnterEarnings() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement enterEarnings = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Enter Earnings']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", enterEarnings);
@@ -246,7 +246,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickHolidayPay() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement holidayPay = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Holiday Pay']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", holidayPay);
@@ -264,7 +264,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickPunchImageReview() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement punchImageReview = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Punch Image Review']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", punchImageReview);
@@ -282,7 +282,7 @@ public class C27504 extends TC_BaseClass {
 
 	public void clickApproveEarnings() throws InterruptedException {
 		clickUnifocus();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement approveEarnings = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Approve Earnings']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", approveEarnings);

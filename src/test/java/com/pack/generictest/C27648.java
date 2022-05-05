@@ -56,14 +56,14 @@ public class C27648 extends TC_BaseClass{
 	WebElement tot;
 	
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
@@ -86,7 +86,7 @@ public class C27648 extends TC_BaseClass{
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
@@ -98,19 +98,19 @@ public class C27648 extends TC_BaseClass{
 
 	}
 	public void selectDataBase(String db,String dbName,String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[text()='"+db+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[normalize-space()='"+dbName+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
@@ -124,10 +124,10 @@ public class C27648 extends TC_BaseClass{
 		String un = unifocus.getText();
 		System.out.println(un);
 		Assert.assertEquals("UniFocus", un);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement setup = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", setup);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement employee = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Employee']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employee);
 	}
@@ -153,7 +153,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void EmployeeClasses() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeClasses = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Employee Classes']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeClasses);
 		driver.switchTo().frame(frame);
@@ -176,7 +176,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void EmployeeFieldOverrides() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeFieldOverrides = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Employee Field Overrides']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeFieldOverrides);
 		driver.switchTo().frame(frame);
@@ -199,7 +199,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void EmployeeSets() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeSets = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Employee Sets']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeSets);
 		driver.switchTo().frame(frame);
@@ -227,7 +227,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void employeeUserMaps() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeUserMaps = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Employee User Maps']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeUserMaps);
 		driver.switchTo().frame(frame);
@@ -249,7 +249,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void employeeWorkClasses() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeWorkClasses = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Employee Work Classes']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeWorkClasses);
 		driver.switchTo().frame(frame);
@@ -271,7 +271,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void localTaxes() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement localTaxes = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Local Taxes']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", localTaxes);
 		driver.switchTo().frame(frame);
@@ -293,7 +293,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void salaryDistributions() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement salaryDistributions = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Salary Distributions']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", salaryDistributions);
 		driver.switchTo().frame(frame);
@@ -315,7 +315,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void ScheduleGroups() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeClasses = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Schedule Groups']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeClasses);
 		driver.switchTo().frame(frame);
@@ -337,7 +337,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void states() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement states = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='States']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", states);
 		driver.switchTo().frame(frame);
@@ -359,7 +359,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void statusChangeReasons() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement statusChangeReasons = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Status Change Reasons']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", statusChangeReasons);
 		driver.switchTo().frame(frame);
@@ -381,7 +381,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void taxTypes() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement taxTypes = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Tax Types']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", taxTypes);
 		driver.switchTo().frame(frame);
@@ -403,7 +403,7 @@ public class C27648 extends TC_BaseClass{
 	}
 	public void timeOffTypes() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement timeOffTypes = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Time Off Types']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", timeOffTypes);
 		driver.switchTo().frame(frame);

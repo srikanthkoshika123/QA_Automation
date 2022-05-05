@@ -46,14 +46,14 @@ public class C27649 extends TC_BaseClass {
 	WebElement userDefinedDatasets;
 
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
@@ -76,7 +76,7 @@ public class C27649 extends TC_BaseClass {
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
@@ -88,19 +88,19 @@ public class C27649 extends TC_BaseClass {
 
 	}
 	public void selectDataBase(String db,String dbName,String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[text()='"+db+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[normalize-space()='"+dbName+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
@@ -114,17 +114,17 @@ public class C27649 extends TC_BaseClass {
 		String un = unifocus.getText();
 		System.out.println(un);
 		Assert.assertEquals("UniFocus", un);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement setup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", setup);
 		
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement financial = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='SETUP$Menu']/li[12]/div")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", financial);
 	}
 
 	public void accounts() {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement accounts = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Accounts']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", accounts);
 
@@ -150,7 +150,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void budgetDatasets() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement budgetDatasets = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Budget Datasets']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", budgetDatasets);
@@ -175,7 +175,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void financialPeriods() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement financialPeriods = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Financial Periods']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", financialPeriods);
@@ -199,7 +199,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void kbiSets() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement kbiSets = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='KBI Sets']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", kbiSets);
 		driver.switchTo().frame(frame);
@@ -230,7 +230,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void payRollMap() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement payrollJEMap = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@title='Payroll JE Map']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", payrollJEMap);
@@ -263,7 +263,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void systemDefinedDatasets() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement systemDefinedDatasets = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='System Defined Datasets']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", systemDefinedDatasets);
@@ -288,7 +288,7 @@ public class C27649 extends TC_BaseClass {
 
 	public void userDefinedDatasets() {
 		clickUnifocus();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement userDefinedDatasets = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='User Defined Datasets']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", userDefinedDatasets);

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.pack.employeemaintenancetestcases.TC_BaseClass;
-
+@SuppressWarnings("deprecation")
 public class EmployeeMaintenance extends TC_BaseClass {
 	WebDriver ldriver;
 

@@ -39,28 +39,28 @@ public class C33388 extends TC_BaseClass {
 
 	
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
 	}
 
 	public void setUserName(String uname) {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement txtName = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Login ID']")));
 		txtName.sendKeys(uname);
 	}
 
 	public void setPassWord(String pwd) {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement password = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Password']")));
 		password.sendKeys(pwd);
@@ -69,19 +69,19 @@ public class C33388 extends TC_BaseClass {
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
 		System.out.println("signin clicked");
-		WebDriverWait wait1 = new WebDriverWait(driver, 120);
+		WebDriverWait wait1 = new WebDriverWait(driver, 180);
 		WebElement rms = wait1
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[normalize-space()='"+dbModel+"']")));
 		rms.click();
 
 	}
 	public void selectDataBase(String db,String dbName,String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
@@ -89,11 +89,11 @@ public class C33388 extends TC_BaseClass {
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[text()='"+db+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);*/
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[normalize-space()='"+dbName+"']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
@@ -112,7 +112,7 @@ public class C33388 extends TC_BaseClass {
 		String un = unifocus.getText();
 		System.out.println(un);
 		Assert.assertEquals("UniFocus", un);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement financial = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Financial']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", financial);
@@ -236,25 +236,25 @@ public class C33388 extends TC_BaseClass {
 		a.moveToElement(refdropdown).click().build().perform();
 		driver.switchTo().activeElement();
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement addorconfig = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Add or Configure']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addorconfig);
         
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement rd = wait2.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//input[@placeholder='Add Reference Dataset']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", rd);
 
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement y = wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='2020']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", y);
 
-		WebDriverWait wait4 = new WebDriverWait(driver, 40);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement original = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Original']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", original);
 
-		WebDriverWait wait11 = new WebDriverWait(driver, 40);
+		WebDriverWait wait11 = new WebDriverWait(driver, 240);
 		WebElement savebutton = wait11
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Save']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", savebutton);
@@ -267,16 +267,16 @@ public class C33388 extends TC_BaseClass {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Default']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", refdropdown);
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement addorconfig = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Add or Configure']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addorconfig);
 
-		WebDriverWait wait13 = new WebDriverWait(driver, 120);
+		WebDriverWait wait13 = new WebDriverWait(driver, 180);
 		WebElement ard = wait13.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[2]/div[1]/div/div/div/div//button[@class='ant-btn ant-btn-icon-only']")));
 
-		WebDriverWait wait12 = new WebDriverWait(driver, 40);
+		WebDriverWait wait12 = new WebDriverWait(driver, 240);
 		WebElement savebutton = wait12
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Save']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", savebutton);
@@ -288,7 +288,7 @@ public class C33388 extends TC_BaseClass {
 		while (attempts < 2) {
 			try {
                  Thread.sleep(3000);
-				WebDriverWait wait = new WebDriverWait(driver, 40);
+				WebDriverWait wait = new WebDriverWait(driver, 240);
 				WebElement spa = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 						"//*[@id='root']/div/section/section/section/main/div/div/div/section/div/div[2]/div/div[1]/div/div/div/div/div/div/div[2]/div[2]/div/table/tbody/tr[7]/td/div")));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", spa);
@@ -307,7 +307,7 @@ public class C33388 extends TC_BaseClass {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Default']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", refdropdown);
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement addorconfig = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Add or Configure']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addorconfig);
@@ -317,18 +317,18 @@ public class C33388 extends TC_BaseClass {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Add New']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addnew);
 
-		WebDriverWait wait12 = new WebDriverWait(driver, 40);
+		WebDriverWait wait12 = new WebDriverWait(driver, 240);
 		WebElement viewName = wait12
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='ant-input']")));
 		Thread.sleep(2000);
 		viewName.sendKeys("test new view");
 		Thread.sleep(2000);
-		WebDriverWait wait11 = new WebDriverWait(driver, 40);
+		WebDriverWait wait11 = new WebDriverWait(driver, 240);
 		WebElement save = wait11.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("(//button[@class='ant-btn ant-btn-primary'])[2]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", save);
 		Thread.sleep(3000);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement addReferenceDataset = wait2.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Add Reference Dataset']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addReferenceDataset);
@@ -343,7 +343,7 @@ public class C33388 extends TC_BaseClass {
 
 		WebElement original = driver.findElement(By.xpath("//li[text()='Original']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", original);
-		WebDriverWait wait11 = new WebDriverWait(driver, 40);
+		WebDriverWait wait11 = new WebDriverWait(driver, 240);
 		WebElement savebutton = wait11
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Save']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", savebutton);
@@ -352,18 +352,18 @@ public class C33388 extends TC_BaseClass {
 	}
 
 	public void DeletingAddNew() {
-		WebDriverWait wait21 = new WebDriverWait(driver, 120);
+		WebDriverWait wait21 = new WebDriverWait(driver, 180);
 		WebElement refdropdown = wait21
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='ant-select-selection__rendered'])[2]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", refdropdown);
 		driver.switchTo().activeElement();
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement addorconfig = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='Add or Configure']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addorconfig);
 
-		WebDriverWait wait15 = new WebDriverWait(driver, 40);
+		WebDriverWait wait15 = new WebDriverWait(driver, 240);
 		WebElement delete = wait15.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"(//button[@class='ant-btn ant-btn-icon-only'])[2]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", delete);
@@ -375,11 +375,11 @@ public class C33388 extends TC_BaseClass {
 		System.out.println(text);
 		Assert.assertEquals("Are you sure you want to delete this view?", text);
 
-		WebDriverWait wait11 = new WebDriverWait(driver, 40);
+		WebDriverWait wait11 = new WebDriverWait(driver, 240);
 		WebElement ok = wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='OK']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
 
-		WebDriverWait wait18 = new WebDriverWait(driver, 40);
+		WebDriverWait wait18 = new WebDriverWait(driver, 240);
 		WebElement save = wait18.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Save']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", save);
 

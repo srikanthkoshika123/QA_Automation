@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.pack.employeemaintenancetestcases.TC_BaseClass;
-
+@SuppressWarnings("deprecation")
 public class C30318 extends TC_BaseClass {
 	WebDriver ldriver;
 
@@ -40,14 +40,14 @@ public class C30318 extends TC_BaseClass {
 	WebElement endTime;
 
 	public void setPartnerCode(String pc) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 120);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		WebElement partnerCode = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//input[@class='x-input-el x-form-field x-input-text']")));
 		partnerCode.sendKeys(pc);
 	}
 
 	public void clickNext() {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement next = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='x-button-label']")));
 		next.click();
@@ -70,7 +70,7 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void clickSignIn(String dbModel) throws InterruptedException {
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement signin = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//div[@class='x-button x-button-no-icon x-button-primary-wide x-layout-box-item x-stretched']")));
 		signin.click();
@@ -83,18 +83,18 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void selectDataBase(String db, String dbName, String module) {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickDB = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath(
 				"//button[@class='ant-btn database-chooser-button singularity-button-no-box-shadow ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickDB);
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement DB = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='" + db + "']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DB);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement doral = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[normalize-space()='" + dbName + "']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", doral);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement ok = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
@@ -117,7 +117,7 @@ public class C30318 extends TC_BaseClass {
 		searchEmp.sendKeys(empId);
 		Thread.sleep(6000);
 		empName.click();
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement scheduling = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Scheduling']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", scheduling);
@@ -125,16 +125,16 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void selectEmployeeType() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeType = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='type']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeType);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement regular = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Regular']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", regular);
 
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement addShift = wait3.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//section[2]/div[1]/div[1]/div[1]/div[1]/button[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addShift);
@@ -145,7 +145,7 @@ public class C30318 extends TC_BaseClass {
 		Thread.sleep(4000);
 		startTime.sendKeys(starttime);
 		endTime.sendKeys(endtime);
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement jobType = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='job']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", jobType);
 
@@ -184,7 +184,7 @@ public class C30318 extends TC_BaseClass {
 
 		}
 		Thread.sleep(1000);
-		WebDriverWait wait5 = new WebDriverWait(driver, 40);
+		WebDriverWait wait5 = new WebDriverWait(driver, 240);
 		WebElement clickAdd = wait5
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickAdd);
@@ -219,11 +219,11 @@ public class C30318 extends TC_BaseClass {
 		startTime.sendKeys(starttime);
 		endTime.sendKeys(endtime);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement jobType = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='job']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", jobType);
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickAdd = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickAdd);
@@ -253,7 +253,7 @@ public class C30318 extends TC_BaseClass {
 
 	@SuppressWarnings("deprecation")
 	public void clickAddShift(String editStart, String editEnd) {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
+		WebDriverWait wait = new WebDriverWait(driver, 240);
 		WebElement addShift = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Add Shift']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addShift);
@@ -266,11 +266,11 @@ public class C30318 extends TC_BaseClass {
 		endTime.sendKeys(Keys.DELETE);
 		endTime.sendKeys(editEnd);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement jobType = wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='job']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", jobType);
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickAdd = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickAdd);
@@ -346,13 +346,13 @@ public class C30318 extends TC_BaseClass {
 		WebElement overRide = driver.findElement(By.xpath("//input[@id='override']"));
 		Thread.sleep(6000);
 		overRide.click();
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement clickAdd = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		Thread.sleep(4000);
 		clickAdd.click();
 		Thread.sleep(4000);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement ok = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='ant-modal-body']//button[2]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
@@ -398,7 +398,7 @@ public class C30318 extends TC_BaseClass {
 		endTime.sendKeys(Keys.CONTROL + "a");
 		endTime.sendKeys(Keys.DELETE);
 		endTime.sendKeys(endtime);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement save = wait3
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", save);
@@ -428,17 +428,17 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void clickDeleteSelectedShifts() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement delete = wait1.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//section[2]//div[1]//div[1]//div[1]//div[1]//button[3]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", delete);
 		Thread.sleep(2000);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement DeleteShift = wait3.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//div[normalize-space()='Delete Selected Shift']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DeleteShift);
 		Thread.sleep(4000);
-		WebDriverWait wait4 = new WebDriverWait(driver, 40);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement clickOk = wait4
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickOk);
@@ -468,29 +468,29 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void clickDelete() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement Delete = wait1
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Delete Shift']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Delete);
 		Thread.sleep(2000);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement ok = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", ok);
 	}
 
 	public void clickDeleteAllShifts() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement delete = wait1.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//section[2]//div[1]//div[1]//div[1]//div[1]//button[3]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", delete);
 		Thread.sleep(2000);
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement DeleteShift = wait3.until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//div[normalize-space()='Delete All Shifts']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", DeleteShift);
 
-		WebDriverWait wait4 = new WebDriverWait(driver, 40);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement clickOk = wait4
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickOk);
@@ -498,14 +498,14 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void selectPermanent(String starttime, String endtime, String day12) throws InterruptedException {
-		WebDriverWait wait3 = new WebDriverWait(driver, 40);
+		WebDriverWait wait3 = new WebDriverWait(driver, 240);
 		WebElement addShift = wait3.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//section[2]/div[1]/div[1]/div[1]/div[1]/button[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addShift);
 		Thread.sleep(4000);
 		startTime.sendKeys(starttime);
 		endTime.sendKeys(endtime);
-		WebDriverWait wait4 = new WebDriverWait(driver, 40);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement jobType = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='job']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", jobType);
 
@@ -524,16 +524,16 @@ public class C30318 extends TC_BaseClass {
 			}
 
 		}
-		WebDriverWait wait6 = new WebDriverWait(driver, 40);
+		WebDriverWait wait6 = new WebDriverWait(driver, 240);
 		WebElement clickAdd = wait6
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", clickAdd);
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeType = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='type']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeType);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement Permanent = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Permanent']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", Permanent);
@@ -542,7 +542,7 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void selectVariableType(String EmployeeType) throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeType = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='type']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeType);
 		Thread.sleep(3000);
@@ -550,12 +550,12 @@ public class C30318 extends TC_BaseClass {
 		Thread.sleep(3000);
 		employee.click();
 		
-		WebDriverWait wait4 = new WebDriverWait(driver, 40);
+		WebDriverWait wait4 = new WebDriverWait(driver, 240);
 		WebElement clickOk = wait4
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary']")));
 		Thread.sleep(1000);
 		clickOk.click();
-		WebDriverWait wait5 = new WebDriverWait(driver, 40);
+		WebDriverWait wait5 = new WebDriverWait(driver, 240);
 		WebElement informationSaved = wait5.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//span[contains(text(),'Scheduling Information Saved')]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", informationSaved);
@@ -565,11 +565,11 @@ public class C30318 extends TC_BaseClass {
 	}
 
 	public void EmployeeType() throws InterruptedException {
-		WebDriverWait wait1 = new WebDriverWait(driver, 40);
+		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement employeeType = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='type']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", employeeType);
 		Thread.sleep(2000);
-		WebDriverWait wait2 = new WebDriverWait(driver, 40);
+		WebDriverWait wait2 = new WebDriverWait(driver, 240);
 		WebElement variable = wait2
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Variable']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", variable);
