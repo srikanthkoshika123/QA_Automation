@@ -414,8 +414,12 @@ public class C33432 extends TC_BaseClass {
 		Assert.assertEquals("Confirm Delete?", deleteconfirm);
 
 		WebDriverWait wait3 = new WebDriverWait(driver, 120);
-		WebElement cancel = wait3
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Cancel'])[2]")));
+		WebElement delete = wait3
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-primary ant-btn-sm']")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", delete);
+		WebDriverWait wait4 = new WebDriverWait(driver, 120);
+		WebElement cancel = wait4
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn']//span[text()='Cancel']")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", cancel);
 
 	}
