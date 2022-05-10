@@ -116,7 +116,6 @@ public class C27503 extends TC_BaseClass {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//header/div[1]/div[1]/div[1]/button[1]")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", unifocus);
 		String un = unifocus.getText();
-		System.out.println(un);
 		Assert.assertEquals("UniFocus", un);
 		WebDriverWait wait1 = new WebDriverWait(driver, 240);
 		WebElement labor = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Labor']")));

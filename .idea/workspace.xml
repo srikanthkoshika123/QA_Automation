@@ -6,34 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="042864ee-d8eb-4cb4-88ce-2b163445f3b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33388.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33388.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33432.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33432.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33433.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/budgeting/C33433.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27427.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27427.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27428.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27428.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27823.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C27823.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C28156.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C28156.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30317.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30317.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30318.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30318.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30319.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C30319.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32852.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32852.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32967.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32967.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32968.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C32968.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C33193.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/C33193.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/EmployeeMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/employeemaintenance/EmployeeMaintenance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27503.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27503.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27504.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27504.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27505.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27505.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27506.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27506.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27507.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27507.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27509.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27509.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27647.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27647.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27648.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27648.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27649.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27649.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27650.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27650.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27651.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27651.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27652.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pack/generictest/C27652.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/745 G6/git/QA-Automation-EmployeeMaintenance/src/test/java/com/pack/generictestcases&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/745 G6/git/QA-Automation-EmployeeMaintenance",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\745 G6\git\QA-Automation-EmployeeMaintenance\src\test\java\com\pack\generictestcases" />
