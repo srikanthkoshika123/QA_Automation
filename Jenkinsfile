@@ -6,7 +6,7 @@ pipeline {
       booleanParam(defaultValue: true, description: 'Whether to run unit tests', name: 'runUnitTests')
       booleanParam(defaultValue: false, description: 'Whether to run integration tests', name: 'runIntegrationTests')
       booleanParam(defaultValue: false, description: 'Whether to run sonar', name: 'runSonar')
-      string(defaultValue: 'dtx-pw-build-004', description: 'Which node to run builds on', name: 'buildNodeLabel')
+      string(defaultValue: 'master', description: 'Which node to run builds on', name: 'buildNodeLabel')
    }
    agent {
       node {
