@@ -1,33 +1,73 @@
 pipeline {
-    agent any
-    triggers {
-        cron('@hourly')
-        pollSCM('* * * * *')
+
+    agent {
+        node {
+            label 'master'
+        }
     }
+
     options {
-        buildDiscarder(logRotator(daysToKeepStr: '30'))
-        disableConcurrentBuilds()
+        buildDiscarder logRotator(
+                    daysToKeepStr: '16',
+                    numToKeepStr: '10'
+            )
     }
-    tools {
-        maven '3.8.5'
-        jdk '1.8.0'
-    }
+
     stages {
-        stage ('Checkout') {
+
+        stage('Cleanup Workspace') {
             steps {
-                git url: 'https://github.com/srikanthkoshika123/QA_Automation.git', branch: "master"
+                cleanWs()
+                sh """
+                echo "Cleaned Up Workspace For Project"
+                """
             }
         }
-        stage('Run integration tests') {
+        stage('Code Checkout') {
             steps {
-                sh "mvn clean test"
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/srikanthkoshika123/QA_Automation.git']]
+                ])
             }
         }
-    }
-    post {
-        always {
-            archiveArtifacts "target/**/*"
-            junit "target/**/surefire-reports/*.xml,target/**/failsafe-reports/*.xml"
+        stage ('Build'){
+            	steps {
+        	   sh "mvn clean install"
+            }
         }
+        stage(' Unit Testing') {
+            steps {
+                sh """
+                echo "Running Unit Tests"
+                """
+            }
+        }
+
+        stage('Code Analysis') {
+            steps {
+                sh """
+                echo "Running Code Analysis"
+                """
+            }
+        }
+
+        stage('Build Deploy Code') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                sh """
+                echo "Building Artifact"
+                """
+
+                sh """
+                echo "Deploying Code"
+                """
+            }
+        }
+
     }
 }
+
