@@ -34,7 +34,7 @@ pipeline {
         }
       	  stage ('Build'){
 		steps{
-    	  	 dir("src/test/java") {
+    	  	 dir("pom.xml") {
 	    	sh "mvn clean install"
              }
      	  }
