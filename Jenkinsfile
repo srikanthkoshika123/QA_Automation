@@ -33,12 +33,11 @@ pipeline {
             }
         }
       	  stage ('Build'){
-		steps{
-    	  	 dir("/src/test/java/com/pack/employeemaintenance") {
+		steps{ 
 	    	sh "mvn clean install"
              }
      	  }
-      }
+      
         stage(' Unit Testing') {
             steps {
                 sh """
