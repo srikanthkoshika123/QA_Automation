@@ -1,28 +1,72 @@
 pipeline {
-    agent any
-    tools { 
-        maven 'Maven 3.8.5' 
-        jdk 'jdk 1.8.0' 
+
+    agent {
+        node {
+            label 'master'
+        }
     }
+
+    options {
+        buildDiscarder logRotator(
+                    daysToKeepStr: '16',
+                    numToKeepStr: '10'
+            )
+    }
+
     stages {
-        stage ('Initialize') {
+
+        stage('Cleanup Workspace') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
+                cleanWs()
+                sh """
+                echo "Cleaned Up Workspace For Project"
+                """
+            }
+        }
+        stage('Code Checkout') {
+            steps {
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/srikanthkoshika123/QA_Automation.git']]
+                ])
             }
         }
 
-         stage ('Build') {
+        stage(' Unit Testing') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
-            }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
+                sh """
+                echo "Running Unit Tests"
+                """
             }
         }
+
+        stage('Code Analysis') {
+            steps {
+                sh """
+                echo "Running Code Analysis"
+                """
+            }
+        }
+
+        stage('Build Deploy Code') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                sh """
+                echo "Building Artifact"
+                """
+
+                sh """
+                echo "Deploying Code"
+                """
+            }
+        }
+
     }
 }
+
+
+
+
