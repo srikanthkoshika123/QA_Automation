@@ -34,7 +34,7 @@ pipeline {
         }
       	  stage ('Build'){
 		steps{
-    	  	 dir("pom.xml") {
+    	  	 dir("/src/test/java/com/pack/employeemaintenance") {
 	    	sh "mvn clean install"
              }
      	  }
