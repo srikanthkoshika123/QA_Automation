@@ -1,30 +1,33 @@
 pipeline {
     agent any
+    triggers {
+        cron('@hourly')
+        pollSCM('* * * * *')
+    }
+    options {
+        buildDiscarder(logRotator(daysToKeepStr: '30'))
+        disableConcurrentBuilds()
+    }
     tools {
-        maven "3.8.5"
-        jdk "1.8.0"
+        maven '3.8.5'
+        jdk '1.8.0'
     }
     stages {
-        stage('Initialize'){
-            steps{
-                echo "PATH = ${M2_HOME}/bin:${PATH}"
-                echo "M2_HOME = /opt/maven"
-            }
-        }
-        stage('Build') {
+        stage ('Checkout') {
             steps {
-                dir("/var/jenkins_home/jobs/UniFocusScheduler_EmployeeMaintenance/branches/master/workspace") {
-                sh 'mvn -B -DskipTests clean package'
-                }
+                git url: 'https://github.com/srikanthkoshika123/QA_Automation.git', branch: "master"
             }
         }
-     }
+        stage('Run integration tests') {
+            steps {
+                sh "mvn clean test"
+            }
+        }
+    }
     post {
-       always {
-          junit(
-        allowEmptyResults: true,
-        testResults: '*/test-reports/.xml'
-      )
-      }
-   } 
+        always {
+            archiveArtifacts "target/**/*"
+            junit "target/**/surefire-reports/*.xml,target/**/failsafe-reports/*.xml"
+        }
+    }
 }
