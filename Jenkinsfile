@@ -32,7 +32,11 @@ pipeline {
                 ])
             }
         }
-
+stage ('Build'){
+    	dir("src/test/java") {
+	   sh "mvn clean install"
+       }
+}
         stage(' Unit Testing') {
             steps {
                 sh """
