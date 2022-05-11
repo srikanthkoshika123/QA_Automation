@@ -23,11 +23,6 @@ pipeline {
                 """
             }
         }
-    stage('Build') {
-         steps {
-            gradlew('clean', 'install')
-         }
-      }
         stage('Code Checkout') {
             steps {
                 checkout([
