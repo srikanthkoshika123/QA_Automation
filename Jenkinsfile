@@ -23,7 +23,15 @@ pipeline {
                 """
             }
         }
-      
+        stage('Code Checkout') {
+            steps {
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/master']],
+                    userRemoteConfigs: [[url: 'https://github.com/srikanthkoshika123/QA_Automation.git']]
+                ])
+            }
+        }
       	  stage ('Build'){
 		steps{ 
 	    	sh "mvn clean install"
