@@ -32,11 +32,11 @@ pipeline {
                 ])
             }
         }
-        stage ('Build'){
-            	steps {
-        	   sh "mvn clean install"
-            }
-        }
+      stage('Build') {
+      maven '-DskipTests clean install -P TOMCAT'
+      maven '-DskipTests clean install -P WAS'
+      step([$class: 'WarningsPublisher', parserConfigurations: [[parserName: 'AspectJ Compiler (ajc)'], [parserName: 'Java Compiler (javac)']]])
+  }
         stage(' Unit Testing') {
             steps {
                 sh """
